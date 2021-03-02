@@ -49,5 +49,8 @@
     "dependencies": {
       "vunit_hdl": "==4.2.0"
     }
+  },
+  "bin": {
+    "hdl-documenter": "bin/hdl-documenter"
   }
 }
