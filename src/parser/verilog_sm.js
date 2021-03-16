@@ -49,6 +49,9 @@ class Paser_stm_verilog extends stm_base.Parser_stm_base {
     let process;
     try {
       const tree = this.parser.parse(code);
+      if (tree.package === undefined) {
+        return { 'svg': [], 'stm': [] };
+      }
       process = this.get_process(tree);
     }
     catch (e) {
