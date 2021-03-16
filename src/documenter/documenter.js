@@ -556,7 +556,7 @@ class Documenter {
 
   async _get_diagram_svg() {
     let code_tree = await this._get_code_tree();
-    if (code_tree === undefined || code_tree.generics === undefined) {
+    if (code_tree === undefined) {
       return;
     }
     return await Diagram.diagramGenerator(code_tree, 0);
